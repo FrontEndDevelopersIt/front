@@ -55,13 +55,13 @@ function getData(url, params, callback){
     axios.get(url, params).then(response=>{
         switch(response.status) {
             case(200) :
-                msg = Translater(response.data.data);
+                msg = 'Ваш аккаунт был успешно активирован.';
                 break;
             case(202) :
                 msg = Translater(response.data.data);
                 break;
         }
-        callback(msg);
+        callback(msg); console.log('msg');
         if(response.status >=200 && response.status < 300)
         {
             if(response.data.data.token)
@@ -80,6 +80,7 @@ function getData(url, params, callback){
                 break;
             case(404) :
                 // location.href = '/error';
+                msg = Translater(error.response.data.error.title)
                 break;
             case(422) :
                 msg = Translater(error.response.data.errors.detail);

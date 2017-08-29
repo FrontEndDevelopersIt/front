@@ -25,7 +25,7 @@
               const url = 'http://api.spidergrodno.tk/api/user'+ str;
               console.log(this.$route.hash.replace(/[#]/g, '/'));
               request.getData(url, null, function (msg) {
-                  document.getElementById('activate').innerHTML = 'Ваш аккаунт был успешно активирован!!!';
+                  document.getElementById('activate').innerHTML = msg;
                   console.log(url);
                   console.log(msg,document.getElementById('activate').innerHTML);
               })
