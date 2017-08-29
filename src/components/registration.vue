@@ -5,7 +5,7 @@
         <div class="registration_cont">
             <br>
             <div class="try">
-                <h2>Registration</h2>
+                <h2>Регистрация </h2>
             </div>
             <br>
             <table>
